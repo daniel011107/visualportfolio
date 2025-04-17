@@ -1,0 +1,302 @@
+@font-face {
+  font-family: 'Acorn';                                                    /* Dear Sir, if you're reading this I just wanted to let you know thanks for being one of the only teachers in this school that I enjoy learning from. No this is not a bribe <3 <3*/
+  src: url('Acorn-Bold.woff') format('woff');                   /* Also please ignore the occasional swearing I used this as a diary. I am a poet, HTML5 is my quill, and MCAST is my crisis */
+  font-weight: normal;
+  font-style: normal;                                                   /* To import my font, as mentioned in the design document.*/
+}
+  
+  * {
+    font-family: 'Acorn', sans-serif;    /*aforementioned font.*/
+  }
+
+html, body {  /*setting up all the pages with a background gradient. took ages to fix, had issues with cutoff and repetition >:(  */
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Acorn-Bold', sans-serif;
+    background: linear-gradient(to bottom, rgb(223,250,252), rgb(63,92,129));
+    color: rgb(41,50,65);
+    display: flex;
+    flex-direction: column;
+}
+.main, section {
+    flex: 1;
+}
+.home-content { /*  */
+    text-align: center;
+    padding-top: 100px;
+}
+.home-content h1 {
+  font-size: 800%;
+}
+.home-content p {
+  font-size: 400%;
+}
+.nav-vertical {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  .contact-section{ /* made these goofies different size to look cleaner*/
+    text-align: center;
+    font-size: 300%;
+  }
+ .socials p {
+    text-align: center;
+    font-size: 100%
+}
+
+.contact-section .icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-vertical a {
+    text-decoration: none;
+    color: rgb(41,50,65);
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-vertical a:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.artwork-row {
+  display: flex;
+  justify-content: center; /* centers the row */
+  gap: 40px;                /* spacing between images */
+  flex-wrap: wrap;         /* optional: wrap to next line on smaller screens */
+  margin-bottom: 2rem;     /* spacing from elements below */
+}
+/* Container if you have one */
+.art-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 2rem;
+}
+
+/* Image styles */
+.art-img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect */
+.art-img:hover {
+  transform: scale(1.1);
+}
+
+/* Tooltip caption using alt */
+.art-img::after {
+  content: attr(alt);
+  position: absolute;
+  bottom: -1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Show caption on hover */
+.art-img:hover::after {
+  opacity: 1;
+}
+.artwork-img {
+  width: 600px;
+  height: 1000px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.artwork-img{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+.project-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  font-size: 150%;
+}
+
+.commissions-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  font-size: 150%;
+}
+.gallery-section h2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+img:hover { /* spent an hour doing this */
+    transform: scale(1.05);
+    filter: brightness(85%);
+}
+
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+}
+.about-container {
+    background: none; /* remove any overriding gradient or image */
+    height: 100%;
+    font-size: 300%;
+}
+.about-boxes, .about-boxes.copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; 
+    font-size: 50%;
+}
+
+.box {
+    width: 50%; /* originally was -50%, but CSS apparently can't do negative width #buns */
+    height: 500%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 20px;
+    width: 500px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    justify-self: end;
+    align-self: center;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    grid-column: span 2;
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+body {                                                /* the BIGGEST pain in the ass. had to convert OTF to WOFF for this MF to work >:0 */
+  font-family: 'Acorn', sans-serif;
+}
+
+.gallery-section h2 {
+  font-size: 500%;
+}
+
+.about-title {
+  font-family: 'Acorn', sans-serif;
+  font-size: 3em;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.box {
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: url('../images/placeholder.png') no-repeat center/cover;
+  margin: 20px auto;
+}
+
+.contact-form {                         /* lost track of this and was fucking up my mailto a TON */
+  width: 90%;
+  margin: 0 auto;
+  font-size: 75%; 
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  min-width: 200px;
+}
+
+.message-group textarea {
+  height: 100px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
