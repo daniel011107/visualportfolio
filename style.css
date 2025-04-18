@@ -180,7 +180,7 @@ img:hover { /* spent an hour doing this */
 
 .box {
     width: 50%; /* originally was -50%, but CSS apparently can't do negative width #buns */
-    height: 500%;
+    height: 200%;
     margin: 20px auto;
     padding: 20px;
     background: white;
