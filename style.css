@@ -179,6 +179,8 @@ img:hover { /* spent an hour doing this */
 }
 
 .box {
+    max-height: 300px;
+    overflow: auto;
     width: 50%; /* originally was -50%, but CSS apparently can't do negative width #buns */
     height: 200%;
     margin: 20px auto;
