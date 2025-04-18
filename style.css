@@ -261,7 +261,7 @@ body {                                                /* the BIGGEST pain in the
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: url('../images/placeholder.png') no-repeat center/cover;
+  url(/visualportfolio/images/placeholder.png') no-repeat center/cover;
   margin: 20px auto;
 }
 
